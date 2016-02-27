@@ -3,8 +3,13 @@ exports = (typeof window === 'undefined') ? global : window;
 exports.arraysAnswers = {
 
   indexOf : function(arr, item) {
-    return arr.indexOf(item);
-
+    var index;
+    for(index in arr){
+      if (arr[index] === item){
+        return parseInt(index);
+      }
+    }
+    return -1;
   },
 
   sum : function(arr) {
@@ -17,7 +22,6 @@ exports.arraysAnswers = {
   },
 
   remove : function(arr, item) {
-    var
 
 
   },
