@@ -22,7 +22,14 @@ exports.arraysAnswers = {
   },
 
   remove : function(arr, item) {
-
+    var arrCopy = arr;
+    var index;
+    for(index in arrCopy){
+     if(arrCopy[index] === item) {
+       arrCopy.splice(index, 1);
+     }
+    }
+    return arrCopy;
 
   },
 
